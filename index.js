@@ -22,30 +22,13 @@ buttons.forEach((button) => {
     result.textContent += e.target.id;
     result2.textContent += e.target.id;
 
-    if ((containsPlus = true)) {
+    if ((containsPlus = true ) || (containsMinus = true) || (containsDivide = true )||(containsMultiply = true))  {
       plus.classList.remove("plus_none");
       minus.classList.remove("minus_none");
       divide.classList.remove("divide_none");
       multiply.classList.remove("multiply_none");
     }
-    if ((containsMinus = true)) {
-      plus.classList.remove("plus_none");
-      minus.classList.remove("minus_none");
-      divide.classList.remove("divide_none");
-      multiply.classList.remove("multiply_none");
-    }
-    if ((containsDivide = true)) {
-      plus.classList.remove("plus_none");
-      minus.classList.remove("minus_none");
-      divide.classList.remove("divide_none");
-      multiply.classList.remove("multiply_none");
-    }
-    if ((containsMultiply = true)) {
-      plus.classList.remove("plus_none");
-      minus.classList.remove("minus_none");
-      divide.classList.remove("divide_none");
-      multiply.classList.remove("multiply_none");
-    }
+
   });
 });
 
@@ -55,25 +38,7 @@ buttonsOperators.forEach((buttonOperator) => {
   buttonOperator.addEventListener("click", (e) => {
     result2.textContent += e.target.id;
 
-    if ((containsPlus = true)) {
-      plus.classList.remove("plus_none");
-      minus.classList.remove("minus_none");
-      divide.classList.remove("divide_none");
-      multiply.classList.remove("multiply_none");
-    }
-    if ((containsMinus = true)) {
-      plus.classList.remove("plus_none");
-      minus.classList.remove("minus_none");
-      divide.classList.remove("divide_none");
-      multiply.classList.remove("multiply_none");
-    }
-    if ((containsDivide = true)) {
-      plus.classList.remove("plus_none");
-      minus.classList.remove("minus_none");
-      divide.classList.remove("divide_none");
-      multiply.classList.remove("multiply_none");
-    }
-    if ((containsMultiply = true)) {
+    if ((containsPlus = true ) || (containsMinus = true) || (containsDivide = true )||(containsMultiply = true))  {
       plus.classList.remove("plus_none");
       minus.classList.remove("minus_none");
       divide.classList.remove("divide_none");
