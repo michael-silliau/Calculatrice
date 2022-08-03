@@ -51,7 +51,6 @@ buttonsOperators.forEach((buttonOperator) => {
 
 equal.addEventListener("click", () => {
   result.textContent = eval(result2.textContent);
-  result2.textContent += e.target.id;
   decimal.classList.remove("decimal_none");
 });
 
