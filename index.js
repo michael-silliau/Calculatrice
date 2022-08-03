@@ -12,6 +12,7 @@ let containsPlus = plus.classList.contains("plus_none");
 let containsMinus = minus.classList.contains("minus_none");
 let containsDivide = divide.classList.contains("divide_none");
 let containsMultiply = multiply.classList.contains("multiply_none");
+const operators = [plus,minus,multiply,divide]
 
 
 ///// boucle sur les boutons chiffres c et . 
@@ -81,7 +82,6 @@ buttonsOperators.forEach((buttonOperator) => {
   });
 });
 
-
 ///// Les écouteurs d'évenements
 
 equal.addEventListener("click", () => {
@@ -100,38 +100,14 @@ decimal.addEventListener("click", () => {
   decimal.classList.add("decimal_none");
 });
 
-plus.addEventListener("click", () => {
-  result.textContent = "";
-  decimal.classList.remove("decimal_none");
-  plus.classList.toggle("plus_none");
-  minus.classList.toggle("minus_none");
-  multiply.classList.toggle("multiply_none");
-  divide.classList.toggle("divide_none");
-});
-
-minus.addEventListener("click", () => {
-  result.textContent = "";
-  decimal.classList.remove("decimal_none");
-  plus.classList.toggle("plus_none");
-  minus.classList.toggle("minus_none");
-  multiply.classList.toggle("multiply_none");
-  divide.classList.toggle("divide_none");
-});
-
-multiply.addEventListener("click", () => {
-  result.textContent = "";
-  decimal.classList.remove("decimal_none");
-  plus.classList.toggle("plus_none");
-  minus.classList.toggle("minus_none");
-  multiply.classList.toggle("multiply_none");
-  divide.classList.toggle("divide_none");
-});
-
-divide.addEventListener("click", () => {
-  result.textContent = "";
-  decimal.classList.remove("decimal_none");
-  plus.classList.toggle("plus_none");
-  minus.classList.toggle("minus_none");
-  multiply.classList.toggle("multiply_none");
-  divide.classList.toggle("divide_none");
-});
+operators.forEach((operator) => {
+  operator.addEventListener("click", () => {
+    result.textContent = "";
+    decimal.classList.remove("decimal_none");
+    plus.classList.toggle("plus_none");
+    minus.classList.toggle("minus_none");
+    multiply.classList.toggle("multiply_none");
+    divide.classList.toggle("divide_none");
+    
+    }
+  )});
